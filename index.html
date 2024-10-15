@@ -5,49 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Sistema de Stock</title>
 
 </head>
 
 <body>
 
-    <section id="section-carga">
-        <header>
-            <h1>Carga de nuevos productos</h1>
-        </header>
-        <form id="formulario-carga">
-            <label><input id="id-carga" placeholder="ID" type="text"></label>
-            <label><input id="tipo-carga" placeholder="Tipo de prenda" type="text"></label>
-            <label><input id="talle-carga" placeholder="Talle" type="text"></label>
-            <label><input id="cantidad-carga" placeholder="Cantidad" type="number"></label>
-            <label><input id="precio-carga" placeholder="Precio costo" type="number"></label>
-            <button id="cargar" type="submit">Cargar</button>
-        </form>
-    </section>
+    <header>
+        <h1>SISTEMA DE STOCK</h1>
+        <img src="/imgs/logo.svg" alt="logo-HAZ">
+        <nav> <a id="ver-todos" type="button" class="boton">Ver todos los productos en stock</a>
+        </nav>
 
-    <section id="section-busqueda">
-        <header>
-            <h1>Búsqueda de producto por su ID</h1>
-        </header>
-        <form id="formulario-busqueda">
-            <label><input id="id-busqueda" placeholder="ID" type="search" required></label>
-            <button id="buscar" type="submit">Buscar</button>
-        </form>
-        <table>
+    </header>
+
+    <dialog id="modal">
+        <button id="cierre">x</button>
+        <h1 id="h1-modal">Productos en stock</h1>
+
+        <table id="tabla-stock-popup">
             <thead>
-                <th>ID</th>
-                <th>Tipo de prenda</th>
-                <th>Talle</th>
-                <th>Costo</th>
+                <tr>
+                    <td class="td-id">ID</td>
+                    <td class="td-tipo">Tipo de prenda</td>
+                    <td class="td-categoria">Categoría</td>
+                    <td class="td-precio">Costo</td>
+                    <td class="td-total">Precio Final</td>
+                </tr>
             </thead>
+
         </table>
-        <div id="tabla-resultados"></div>
-    </section>
-<footer></footer>
+    </dialog>
+
+
+    <main>
+        <section id="section-carga">
+
+            <h2> Carga de productos </h2>
+
+            <form id="formulario-carga">
+                <label><input id="id-carga" placeholder="ID" type="text"></label>
+                <label><input id="tipo-carga" placeholder="Tipo de prenda" type="text"></label>
+                <label><input id="talle-carga" placeholder="Categoría" type="text"></label>
+                <label><input id="precio-carga" placeholder="Precio costo" type="number"></label>
+                <button id="cargar" type="submit" class="boton">Cargar</button>
+            </form>
+
+
+        </section>
+
+
+        <section id="section-busqueda">
+            <header>
+                <h2 class="blanco">Búsqueda de producto por su ID</h2>
+            </header>
+            <form id="formulario-busqueda">
+                <label><input id="id-busqueda" placeholder="ID" type="search" required></label>
+                <button id="buscar" type="submit" class="boton-blanco">Buscar</button>
+            </form>
+
+            <div id="tabla-resultados"></div>
+        </section>
+
+
+
+    </main>
+    <footer>
+        <p>Coderhouse<br />
+            Florencia Furch | JavaScript Flex | Comisión 64785</p>
+    </footer>
 
 
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="main.js"></script>
 
 </html>

@@ -1,37 +1,77 @@
-body{
-    background-color: #edede9;
+header {
+    border-bottom: 1px solid #000;
+    padding: 25px 0 35px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-#section-carga{
+#section-carga {
     float: left;
     width: 30%;
     padding: 150px;
-    
+    align-items: flex-start;
+
 }
 
-#section-busqueda{
+#section-busqueda {
     float: right;
     width: 30%;
-    padding: 150px;
+    padding: 70px;
+    background-color: #000;
+    border-radius: 25px;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 100px;
 }
 
-h1 {
-    color: #3e342f;
-    font-family: sans-serif;
-    font-weight: 100;
-    font-size: xx-large;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
     text-transform: uppercase;
 }
 
-label{
+h1 {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+#section-busqueda h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: -35px;
+    font-weight: 200;
+}
+
+form {
+    margin-top: 50px;
+}
+
+label {
     display: block;
     margin-top: 10px;
     margin-left: auto;
@@ -48,28 +88,42 @@ input {
     font-size: 16px;
 }
 
+#id-busqueda {
+    border: 1px solid #ffffff;
+    background-color: #000;
+    color: #fff;
+}
 
-button {
+
+.boton {
+    font-family: "Inter", sans-serif;
+    background-color: #000;
+    color: #fff;
     margin: 0 auto;
-    padding: 15px;
+    padding: 15px 20px;
     width: 100%;
     border-radius: 15px;
     border: none;
     margin-top: 15px;
-    font-size: 16px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-#cargar {
-    background-color: #38A3A5;
-    color:white;
+    font-size: 14px;
+    font-weight: 400;
     cursor: pointer;
+    text-decoration: none;
 }
 
-#buscar {
-    border: #57CC99 2px solid;
-    color: #57CC99;
+
+.boton-blanco {
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0 auto;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
     cursor: pointer;
 }
 
@@ -79,18 +133,126 @@ div {
     width: 100%;
 }
 
-table td{
+table td {
     padding: 15px;
     width: 100px;
     font-family: sans-serif;
 }
 
-table{
+table {
     width: 100%;
 }
-table th{
+
+table th {
     text-align: left;
     padding: 15px;
     width: 100px;
     font-family: sans-serif;
+}
+
+
+
+footer p {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+}
+
+#listado-stock {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.td-id {
+    width: 10%;
+}
+
+.td-tipo {
+    width: 50%;
+}
+
+.td-categoria {
+    width: 14%;
+}
+
+.td-costo {
+    width: 13%;
+}
+
+.td-total {
+    width: 13%;
+}
+
+.td-id,
+.td-tipo,
+.td-categoria,
+.td-costo,
+.td-total {
+    font-size: 14px;
+}
+
+
+#section-busqueda table {
+    color: #fff;
+}
+
+
+
+#tabla-resultados {
+    margin-top: 45px;
+}
+
+
+#tabla-resultados table {
+    border-bottom: 1px solid #fff;
+}
+
+thead {
+    background-color: #222;
+    color: #fff;
+}
+
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modal {
+    width: 50%;
+}
+
+#cierre {
+
+    font-family: "Inter", sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0 auto;
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    float: inline-end;
+}
+
+#tabla-stock-popup {
+    margin-top: 70px;
+}
+
+#tabla-stock-popup thead {
+    background-color: #555;
+}
+
+#modal div {
+    border-bottom: 1px solid #000;
+}
+
+#h1-modal {
+    float: inline-start;
+    margin-top: 70px;
+    font-size: 36px;
 }
