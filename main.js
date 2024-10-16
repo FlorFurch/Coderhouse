@@ -42,7 +42,48 @@ fetch('https://fakestoreapi.com/products/')
     })
 
 // 2. Constructor de productos
-// 3. Productos ingresados en el Form
+// 3. Form de carga
+let formCarga = document.createElement("form");
+formCarga.setAttribute("id", "formulario-carga");
+
+let inputID = document.createElement("input");
+inputID.setAttribute("type", "text");
+inputID.setAttribute("id", "id-carga");
+inputID.setAttribute("name", "id");
+inputID.setAttribute("placeholder", "ID");
+
+let inputTipo = document.createElement("input");
+inputTipo.setAttribute("type", "text");
+inputTipo.setAttribute("id", "tipo-carga");
+inputTipo.setAttribute("name", "tipo");
+inputTipo.setAttribute("placeholder", "Tipo de prenda");
+
+let inputCat = document.createElement("input");
+inputCat.setAttribute("type", "text");
+inputCat.setAttribute("id", "talle-carga");
+inputCat.setAttribute("name", "categoria");
+inputCat.setAttribute("placeholder", "Categoría");
+
+let inputCosto = document.createElement("input");
+inputCosto.setAttribute("type", "number");
+inputCosto.setAttribute("id", "precio-carga");
+inputCosto.setAttribute("name", "costo");
+inputCosto.setAttribute("placeholder", "Precio costo");
+
+let submitButton = document.createElement("button");
+submitButton.setAttribute("type", "submit");
+submitButton.setAttribute("id", "cargar");
+submitButton.setAttribute("class", "boton");
+submitButton.textContent = "Cargar";
+
+formCarga.appendChild(inputID);
+formCarga.appendChild(inputTipo);
+formCarga.appendChild(inputCat);
+formCarga.appendChild(inputCosto);
+formCarga.appendChild(submitButton);
+
+document.getElementById("form-container").appendChild(formCarga);
+
 function formularioDeCarga(e) {
     const cargaNuevoProducto = document.querySelector("#formulario-carga");
     e.preventDefault();
@@ -78,6 +119,27 @@ const cargaNuevoProducto = document.querySelector("#formulario-carga");
 cargaNuevoProducto.addEventListener("submit", formularioDeCarga);
 
 // 4. Buscar un producto por ID
+// Form de búsqueda
+let form = document.createElement("form");
+form.setAttribute("id", "formulario-busqueda");
+
+let buscarID = document.createElement("input");
+buscarID.setAttribute("type", "text");
+buscarID.setAttribute("id", "id-busqueda");
+buscarID.setAttribute("name", "id");
+buscarID.setAttribute("placeholder", "ID");
+
+let Button = document.createElement("button");
+Button.setAttribute("type", "submit");
+Button.setAttribute("id", "buscar");
+Button.setAttribute("class", "boton-blanco");
+Button.textContent = "Cargar";
+
+form.appendChild(buscarID);
+form.appendChild(Button);
+
+document.getElementById("form-busqueda").appendChild(form);
+
 function validarForm(e) {
     const busquedaID = document.querySelector("#formulario-busqueda");
     e.preventDefault();
@@ -130,3 +192,9 @@ abrirVentana.addEventListener(`click`, () => {
 cerrarVentana.addEventListener(`click`, () => {
     ventana.close();
 })
+
+
+
+
+
+

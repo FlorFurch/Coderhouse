@@ -71,12 +71,17 @@ form {
     margin-top: 50px;
 }
 
+
 label {
     display: block;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+
+#formulario-carga input{
+    margin-top: 15px;
 }
 
 input {
