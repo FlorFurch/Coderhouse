@@ -1,2 +1,0 @@
-# Coderhouse
-Curso JavaScript Flex
