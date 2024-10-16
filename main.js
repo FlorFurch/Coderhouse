@@ -50,24 +50,28 @@ let inputID = document.createElement("input");
 inputID.setAttribute("type", "text");
 inputID.setAttribute("id", "id-carga");
 inputID.setAttribute("name", "id");
+inputID.setAttribute("required", "");
 inputID.setAttribute("placeholder", "ID");
 
 let inputTipo = document.createElement("input");
 inputTipo.setAttribute("type", "text");
 inputTipo.setAttribute("id", "tipo-carga");
 inputTipo.setAttribute("name", "tipo");
+inputTipo.setAttribute("required", "");
 inputTipo.setAttribute("placeholder", "Tipo de prenda");
 
 let inputCat = document.createElement("input");
 inputCat.setAttribute("type", "text");
 inputCat.setAttribute("id", "talle-carga");
 inputCat.setAttribute("name", "categoria");
+inputCat.setAttribute("required", "");
 inputCat.setAttribute("placeholder", "Categoría");
 
 let inputCosto = document.createElement("input");
 inputCosto.setAttribute("type", "number");
 inputCosto.setAttribute("id", "precio-carga");
 inputCosto.setAttribute("name", "costo");
+inputCosto.setAttribute("required", "");
 inputCosto.setAttribute("placeholder", "Precio costo");
 
 let submitButton = document.createElement("button");
@@ -127,6 +131,7 @@ let buscarID = document.createElement("input");
 buscarID.setAttribute("type", "text");
 buscarID.setAttribute("id", "id-busqueda");
 buscarID.setAttribute("name", "id");
+buscarID.setAttribute("required", "");
 buscarID.setAttribute("placeholder", "ID");
 
 let Button = document.createElement("button");
